@@ -1,5 +1,5 @@
 
-//Declare variables and Grab elements
+//Declared variables and Grab elements
 var player_1;
 var player_2;
 var player_1_img;
@@ -14,3 +14,21 @@ var images = ["images/dice1.png", "images/dice2.png", "images/dice3.png", "image
 
 // Start the game
 window.addEventListener("load", start_game);
+
+function start_game(){
+   // Draw players random numbers
+   player_1 = Math.floor(Math.random()*6);
+   player_2 = Math.floor(Math.random()*6);
+
+   // Link player to relative image URL
+   player_1_img = images[player_1];
+   player_2_img = images[player_2];
+
+   // Set images src attribute
+   img1.src = player_1_img;
+   img2.src = player_2_img;
+   display_winner(player_1, player_2);
+}
+
+
+
