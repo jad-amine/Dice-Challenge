@@ -31,4 +31,13 @@ function start_game(){
 }
 
 
-
+// Display Winner Section
+function display_winner(a, b){
+   if(a > b){
+      winner.innerHTML = "Player 1 Wins!"
+   } else if (a < b){
+      winner.innerHTML = "Player 2 Wins!"
+   } else {
+      winner.innerHTML = "Draw!"
+   }
+}
